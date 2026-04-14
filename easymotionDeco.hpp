@@ -70,11 +70,11 @@ class CHyprEasyLabel : public IHyprWindowDecoration {
 
 		PHLWINDOWREF             m_pWindow;
 
-		SP<CGLTexture>           m_tTextTex;
+		SP<Render::GL::CGLTexture> m_tTextTex;
 
 		bool                     m_bWindowSizeChanged = false;
 
-		void                     renderText(CGLTexture& out, const std::string& text, const CHyprColor& color, const Vector2D& bufferSize, const float scale, const int fontSize);
+		void renderText(Render::GL::CGLTexture& out, const std::string& text, const CHyprColor& color, const Vector2D& bufferSize, const float scale, const int fontSize);
 		CBox                     assignedBoxGlobal();
 		void                     renderMotionString(Vector2D& bufferSize, const float scale);
 
